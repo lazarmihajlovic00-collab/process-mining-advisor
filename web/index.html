@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Process Mining Advisor</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/vendor/cytoscape.min.js"></script>
+  <script src="/static/vendor/dagre.min.js"></script>
+  <script src="/static/vendor/cytoscape-dagre.js"></script>
+  <script src="/static/vendor/marked.min.js"></script>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo">PM</div>
+    <div>
+      <h1>Process Mining Advisor</h1>
+      <div class="sub" id="runLabel">…</div>
+    </div>
+  </div>
+  <div class="actions">
+    <span class="badge" id="llmBadge"></span>
+    <button class="ghost" id="btnScenario">Nova simulacija</button>
+    <label class="ghost button">Učitaj log (CSV/XES)<input type="file" id="fileInput" accept=".csv,.xes" hidden></label>
+  </div>
+</header>
+
+<section class="kpis" id="kpis"></section>
+
+<nav class="tabs" id="tabs">
+  <button data-tab="map" class="active">Mapa procesa</button>
+  <button data-tab="findings">Nalazi</button>
+  <button data-tab="levers">Mere i uštede</button>
+  <button data-tab="whatif">Šta ako</button>
+  <button data-tab="advisor">AI savetnik</button>
+  <button data-tab="variants">Varijante</button>
+  <button data-tab="audit">Audit</button>
+</nav>
+
+<main>
+  <section id="tab-map" class="tab active">
+    <div class="toolbar">
+      <label>Prikaži putanje sa ≥ <input type="range" id="minShare" min="0" max="10" step="0.5" value="2"> <span id="minShareVal">2</span>% slučajeva</label>
+      <label><input type="radio" name="edgeLabel" value="count" checked> broj prelaza</label>
+      <label><input type="radio" name="edgeLabel" value="wait"> čekanje (medijana)</label>
+      <a class="ghost button" href="/api/export/model.bpmn">BPMN model</a>
+      <a class="ghost button" href="/api/export/log.csv">Event log CSV</a>
+    </div>
+    <div class="legend">
+      <span><i class="sw manual"></i>ručni rad</span><span><i class="sw system"></i>sistem</span>
+      <span><i class="ln slow"></i>čekanje &gt; 24 h</span><span><i class="ln"></i>debljina = broj slučajeva</span>
+    </div>
+    <div class="map-wrap">
+      <div id="cy"></div>
+      <aside id="nodeInfo" class="card">Klikni na aktivnost za detalje.</aside>
+    </div>
+    <div class="grid2">
+      <div class="card"><h3>Kandidati za automatizaciju (ručni sati godišnje)</h3><div id="candidates"></div></div>
+      <div class="card"><h3>Usklađenost sa propisanim procesom</h3><div id="conformance"></div></div>
+    </div>
+  </section>
+
+  <section id="tab-findings" class="tab"><div id="findingsList" class="cards"></div></section>
+
+  <section id="tab-levers" class="tab">
+    <div class="card">
+      <h3>Mere: procena iz loga <span class="muted" id="compareNote"></span></h3>
+      <div class="table-wrap"><table id="leverTable"></table></div>
+      <p class="muted small">„Izmereno“ = broj minuta / popusta pročitan iz loga. „Pretpostavka“ = pretpostavljen procenat smanjenja.
+        Kolona „simulacija“ ponovo simulira isti kvartal sa uvedenom merom.</p>
+    </div>
+  </section>
+
+  <section id="tab-whatif" class="tab">
+    <div class="grid2">
+      <div class="card">
+        <h3>Izaberi mere</h3>
+        <div id="leverChecks" class="checks"></div>
+        <button id="btnWhatIf">Simuliraj</button>
+        <p class="muted small" id="whatifNote"></p>
+      </div>
+      <div class="card"><h3>Pre / posle (godišnje)</h3><div id="whatifResult" class="muted">Izaberi mere i pokreni simulaciju.</div></div>
+    </div>
+  </section>
+
+  <section id="tab-advisor" class="tab">
+    <div class="grid2 advisor">
+      <div class="card">
+        <div class="row">
+          <h3>Izveštaj savetnika</h3>
+          <button id="btnAdvise">Pokreni savetnika</button>
+        </div>
+        <div id="grounding"></div>
+        <div id="report" class="report muted">Savetnik još nije pokrenut za ovaj log.</div>
+      </div>
+      <div class="card">
+        <div class="row">
+          <h3>Preporuke (čekaju odluku)</h3>
+          <input id="userName" placeholder="Tvoje ime" title="Odluku može doneti samo imenovana osoba">
+        </div>
+        <div id="recs"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tab-variants" class="tab"><div class="card"><div id="variantsList"></div></div></section>
+
+  <section id="tab-audit" class="tab"><div class="card"><div id="auditVerify"></div><div class="table-wrap"><table id="auditTable"></table></div></div></section>
+</main>
+
+<dialog id="scenarioDialog">
+  <form method="dialog">
+    <h3>Nova simulirana firma</h3>
+    <p class="muted small">Izaberi koje probleme simulator ubacuje. Analiza ih ne vidi; treba sama da ih pronađe.</p>
+    <div id="issueChecks" class="checks"></div>
+    <label>Seed <input type="number" id="seedInput" value="7" min="1" max="9999"></label>
+    <menu><button value="cancel" class="ghost">Otkaži</button><button value="ok" id="btnCreate">Simuliraj kvartal</button></menu>
+  </form>
+</dialog>
+<div id="toast"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
