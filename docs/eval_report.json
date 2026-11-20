@@ -1,0 +1,1467 @@
+{
+ "detection": {
+  "clear": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "tp": 169,
+   "fp": 0,
+   "fn": 0,
+   "per_issue": {
+    "approval_bottleneck": {
+     "tp": 11,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "po_change_rework": {
+     "tp": 24,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "manual_invoice_entry": {
+     "tp": 23,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "manual_three_way_match": {
+     "tp": 18,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "price_discrepancy_rework": {
+     "tp": 23,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "batched_payment_run": {
+     "tp": 23,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "maverick_buying": {
+     "tp": 19,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "duplicate_payments": {
+     "tp": 28,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    }
+   }
+  },
+  "mild": {
+   "precision": 1.0,
+   "recall": 0.7751479289940828,
+   "tp": 131,
+   "fp": 0,
+   "fn": 38,
+   "per_issue": {
+    "approval_bottleneck": {
+     "tp": 1,
+     "fp": 0,
+     "fn": 10,
+     "precision": 1.0,
+     "recall": 0.09090909090909091
+    },
+    "po_change_rework": {
+     "tp": 12,
+     "fp": 0,
+     "fn": 12,
+     "precision": 1.0,
+     "recall": 0.5
+    },
+    "manual_invoice_entry": {
+     "tp": 17,
+     "fp": 0,
+     "fn": 6,
+     "precision": 1.0,
+     "recall": 0.7391304347826086
+    },
+    "manual_three_way_match": {
+     "tp": 18,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "price_discrepancy_rework": {
+     "tp": 18,
+     "fp": 0,
+     "fn": 5,
+     "precision": 1.0,
+     "recall": 0.782608695652174
+    },
+    "batched_payment_run": {
+     "tp": 23,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "maverick_buying": {
+     "tp": 14,
+     "fp": 0,
+     "fn": 5,
+     "precision": 1.0,
+     "recall": 0.7368421052631579
+    },
+    "duplicate_payments": {
+     "tp": 28,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    }
+   }
+  },
+  "noisy": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "tp": 169,
+   "fp": 0,
+   "fn": 0,
+   "per_issue": {
+    "approval_bottleneck": {
+     "tp": 11,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "po_change_rework": {
+     "tp": 24,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "manual_invoice_entry": {
+     "tp": 23,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "manual_three_way_match": {
+     "tp": 18,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "price_discrepancy_rework": {
+     "tp": 23,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "batched_payment_run": {
+     "tp": 23,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "maverick_buying": {
+     "tp": 19,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "duplicate_payments": {
+     "tp": 28,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    }
+   }
+  },
+  "no_start": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "tp": 169,
+   "fp": 0,
+   "fn": 0,
+   "per_issue": {
+    "approval_bottleneck": {
+     "tp": 11,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "po_change_rework": {
+     "tp": 24,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "manual_invoice_entry": {
+     "tp": 23,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "manual_three_way_match": {
+     "tp": 18,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "price_discrepancy_rework": {
+     "tp": 23,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "batched_payment_run": {
+     "tp": 23,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "maverick_buying": {
+     "tp": 19,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "duplicate_payments": {
+     "tp": 28,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0
+    }
+   }
+  }
+ },
+ "estimates": {
+  "per_lever": {
+   "po_change_controls": {
+    "n": 14,
+    "metric": "manual_hours_per_year",
+    "confidence": "assumed",
+    "mean_abs_error_pct": 5.4,
+    "max_abs_error_pct": 17.6,
+    "mean_estimated": 105,
+    "mean_simulated": 107.2,
+    "mean_cycle_days_delta": -0.07
+   },
+   "sef_erp_integration": {
+    "n": 10,
+    "metric": "manual_hours_per_year",
+    "confidence": "measured",
+    "mean_abs_error_pct": 0.4,
+    "max_abs_error_pct": 1.6,
+    "mean_estimated": 1004.8,
+    "mean_simulated": 1001.7,
+    "mean_cycle_days_delta": -0.27
+   },
+   "price_catalog_sync": {
+    "n": 11,
+    "metric": "manual_hours_per_year",
+    "confidence": "assumed",
+    "mean_abs_error_pct": 7.1,
+    "max_abs_error_pct": 19.6,
+    "mean_estimated": 282.7,
+    "mean_simulated": 278.2,
+    "mean_cycle_days_delta": -0.31
+   },
+   "auto_three_way_match": {
+    "n": 10,
+    "metric": "manual_hours_per_year",
+    "confidence": "measured",
+    "mean_abs_error_pct": 0.0,
+    "max_abs_error_pct": 0.1,
+    "mean_estimated": 1043.5,
+    "mean_simulated": 1043.6,
+    "mean_cycle_days_delta": -0.28
+   },
+   "no_po_no_pay": {
+    "n": 11,
+    "metric": "manual_hours_per_year",
+    "confidence": "assumed",
+    "mean_abs_error_pct": 59.1,
+    "max_abs_error_pct": 91.6,
+    "mean_estimated": -54.6,
+    "mean_simulated": -211.8,
+    "mean_cycle_days_delta": 0.45
+   },
+   "duplicate_check": {
+    "n": 11,
+    "metric": "manual_hours_per_year",
+    "confidence": "measured",
+    "mean_abs_error_pct": 0.5,
+    "max_abs_error_pct": 2.0,
+    "mean_estimated": 82.2,
+    "mean_simulated": 82.4,
+    "mean_cycle_days_delta": -0.29
+   },
+   "approval_escalation": {
+    "n": 5,
+    "metric": "approval_wait_h_mean_logistika",
+    "confidence": "measured",
+    "mean_abs_error_pct": 1.8,
+    "max_abs_error_pct": 3.5,
+    "mean_estimated": 27.3,
+    "mean_simulated": 27.0,
+    "mean_cycle_days_delta": -0.16
+   },
+   "daily_payment_run": {
+    "n": 12,
+    "metric": "discount_rsd_per_year",
+    "confidence": "measured",
+    "mean_abs_error_pct": 0.0,
+    "max_abs_error_pct": 0.2,
+    "mean_estimated": 530416.7,
+    "mean_simulated": 530750,
+    "mean_cycle_days_delta": -2.07
+   }
+  },
+  "combined": [
+   {
+    "seed": 2,
+    "levers": [
+     "sef_erp_integration",
+     "auto_three_way_match",
+     "duplicate_check"
+    ],
+    "sum_of_estimates_h": 1658,
+    "simulated_together_h": 1647,
+    "cycle_days_mean_delta": -0.4
+   },
+   {
+    "seed": 4,
+    "levers": [
+     "daily_payment_run",
+     "duplicate_check"
+    ],
+    "sum_of_estimates_h": 36,
+    "simulated_together_h": 36,
+    "cycle_days_mean_delta": -2.2
+   },
+   {
+    "seed": 5,
+    "levers": [
+     "sef_erp_integration",
+     "duplicate_check"
+    ],
+    "sum_of_estimates_h": 1140,
+    "simulated_together_h": 1138,
+    "cycle_days_mean_delta": -0.1
+   },
+   {
+    "seed": 6,
+    "levers": [
+     "sef_erp_integration",
+     "auto_three_way_match",
+     "daily_payment_run",
+     "duplicate_check"
+    ],
+    "sum_of_estimates_h": 1939,
+    "simulated_together_h": 1926,
+    "cycle_days_mean_delta": -2.3
+   },
+   {
+    "seed": 7,
+    "levers": [
+     "daily_payment_run",
+     "duplicate_check"
+    ],
+    "sum_of_estimates_h": 109,
+    "simulated_together_h": 109,
+    "cycle_days_mean_delta": -2.4
+   },
+   {
+    "seed": 8,
+    "levers": [
+     "sef_erp_integration",
+     "auto_three_way_match",
+     "daily_payment_run",
+     "duplicate_check"
+    ],
+    "sum_of_estimates_h": 2129,
+    "simulated_together_h": 2127,
+    "cycle_days_mean_delta": -3.0
+   },
+   {
+    "seed": 9,
+    "levers": [
+     "sef_erp_integration",
+     "auto_three_way_match",
+     "daily_payment_run"
+    ],
+    "sum_of_estimates_h": 2238,
+    "simulated_together_h": 2238,
+    "cycle_days_mean_delta": -3.0
+   },
+   {
+    "seed": 10,
+    "levers": [
+     "sef_erp_integration",
+     "auto_three_way_match",
+     "daily_payment_run",
+     "duplicate_check"
+    ],
+    "sum_of_estimates_h": 2478,
+    "simulated_together_h": 2477,
+    "cycle_days_mean_delta": -3.5
+   },
+   {
+    "seed": 11,
+    "levers": [
+     "auto_three_way_match",
+     "daily_payment_run",
+     "duplicate_check"
+    ],
+    "sum_of_estimates_h": 903,
+    "simulated_together_h": 904,
+    "cycle_days_mean_delta": -2.3
+   },
+   {
+    "seed": 12,
+    "levers": [
+     "sef_erp_integration",
+     "auto_three_way_match",
+     "daily_payment_run",
+     "duplicate_check"
+    ],
+    "sum_of_estimates_h": 2163,
+    "simulated_together_h": 2162,
+    "cycle_days_mean_delta": -2.3
+   },
+   {
+    "seed": 15,
+    "levers": [
+     "auto_three_way_match",
+     "daily_payment_run"
+    ],
+    "sum_of_estimates_h": 1374,
+    "simulated_together_h": 1374,
+    "cycle_days_mean_delta": -2.0
+   },
+   {
+    "seed": 17,
+    "levers": [
+     "daily_payment_run",
+     "duplicate_check"
+    ],
+    "sum_of_estimates_h": 84,
+    "simulated_together_h": 85,
+    "cycle_days_mean_delta": -2.3
+   },
+   {
+    "seed": 19,
+    "levers": [
+     "sef_erp_integration",
+     "auto_three_way_match",
+     "daily_payment_run"
+    ],
+    "sum_of_estimates_h": 1577,
+    "simulated_together_h": 1577,
+    "cycle_days_mean_delta": -2.1
+   }
+  ],
+  "rows": [
+   {
+    "seed": 1,
+    "lever": "po_change_controls",
+    "metric": "manual_hours_per_year",
+    "estimated": 176,
+    "simulated": 171,
+    "error_pct": 2.9,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": -0.1
+   },
+   {
+    "seed": 1,
+    "lever": "sef_erp_integration",
+    "metric": "manual_hours_per_year",
+    "estimated": 998,
+    "simulated": 998,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": 0.0
+   },
+   {
+    "seed": 1,
+    "lever": "price_catalog_sync",
+    "metric": "manual_hours_per_year",
+    "estimated": 266,
+    "simulated": 252,
+    "error_pct": 5.6,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": -0.3
+   },
+   {
+    "seed": 2,
+    "lever": "po_change_controls",
+    "metric": "manual_hours_per_year",
+    "estimated": 77,
+    "simulated": 80,
+    "error_pct": -3.8,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": 0.0
+   },
+   {
+    "seed": 2,
+    "lever": "sef_erp_integration",
+    "metric": "manual_hours_per_year",
+    "estimated": 752,
+    "simulated": 742,
+    "error_pct": 1.3,
+    "confidence": "measured",
+    "cycle_days_mean_delta": 0.0
+   },
+   {
+    "seed": 2,
+    "lever": "auto_three_way_match",
+    "metric": "manual_hours_per_year",
+    "estimated": 808,
+    "simulated": 808,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": 0.0
+   },
+   {
+    "seed": 2,
+    "lever": "no_po_no_pay",
+    "metric": "manual_hours_per_year",
+    "estimated": -50,
+    "simulated": -59,
+    "error_pct": 15.3,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": 0.5
+   },
+   {
+    "seed": 2,
+    "lever": "duplicate_check",
+    "metric": "manual_hours_per_year",
+    "estimated": 98,
+    "simulated": 97,
+    "error_pct": 1.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.3
+   },
+   {
+    "seed": 3,
+    "lever": "approval_escalation",
+    "metric": "approval_wait_h_mean_logistika",
+    "estimated": 27.7,
+    "simulated": 27.2,
+    "error_pct": 1.8,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.1
+   },
+   {
+    "seed": 4,
+    "lever": "po_change_controls",
+    "metric": "manual_hours_per_year",
+    "estimated": 77,
+    "simulated": 80,
+    "error_pct": -3.8,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": -0.2
+   },
+   {
+    "seed": 4,
+    "lever": "daily_payment_run",
+    "metric": "discount_rsd_per_year",
+    "estimated": 134000.0,
+    "simulated": 134000,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -2.1
+   },
+   {
+    "seed": 4,
+    "lever": "no_po_no_pay",
+    "metric": "manual_hours_per_year",
+    "estimated": -66,
+    "simulated": -223,
+    "error_pct": 70.4,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": 0.6
+   },
+   {
+    "seed": 4,
+    "lever": "duplicate_check",
+    "metric": "manual_hours_per_year",
+    "estimated": 36,
+    "simulated": 36,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.1
+   },
+   {
+    "seed": 5,
+    "lever": "sef_erp_integration",
+    "metric": "manual_hours_per_year",
+    "estimated": 1079,
+    "simulated": 1077,
+    "error_pct": 0.2,
+    "confidence": "measured",
+    "cycle_days_mean_delta": 0.0
+   },
+   {
+    "seed": 5,
+    "lever": "price_catalog_sync",
+    "metric": "manual_hours_per_year",
+    "estimated": 189,
+    "simulated": 176,
+    "error_pct": 7.4,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": -0.2
+   },
+   {
+    "seed": 5,
+    "lever": "duplicate_check",
+    "metric": "manual_hours_per_year",
+    "estimated": 61,
+    "simulated": 61,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.2
+   },
+   {
+    "seed": 6,
+    "lever": "approval_escalation",
+    "metric": "approval_wait_h_mean_logistika",
+    "estimated": 28.2,
+    "simulated": 28.0,
+    "error_pct": 0.7,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.1
+   },
+   {
+    "seed": 6,
+    "lever": "po_change_controls",
+    "metric": "manual_hours_per_year",
+    "estimated": 73,
+    "simulated": 71,
+    "error_pct": 2.8,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": 0.0
+   },
+   {
+    "seed": 6,
+    "lever": "sef_erp_integration",
+    "metric": "manual_hours_per_year",
+    "estimated": 842,
+    "simulated": 829,
+    "error_pct": 1.6,
+    "confidence": "measured",
+    "cycle_days_mean_delta": 0.0
+   },
+   {
+    "seed": 6,
+    "lever": "auto_three_way_match",
+    "metric": "manual_hours_per_year",
+    "estimated": 997,
+    "simulated": 997,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": 0.0
+   },
+   {
+    "seed": 6,
+    "lever": "price_catalog_sync",
+    "metric": "manual_hours_per_year",
+    "estimated": 229,
+    "simulated": 214,
+    "error_pct": 7.0,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": -0.3
+   },
+   {
+    "seed": 6,
+    "lever": "daily_payment_run",
+    "metric": "discount_rsd_per_year",
+    "estimated": 312000.0,
+    "simulated": 312000,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -2.1
+   },
+   {
+    "seed": 6,
+    "lever": "duplicate_check",
+    "metric": "manual_hours_per_year",
+    "estimated": 100,
+    "simulated": 101,
+    "error_pct": -1.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.3
+   },
+   {
+    "seed": 7,
+    "lever": "po_change_controls",
+    "metric": "manual_hours_per_year",
+    "estimated": 138,
+    "simulated": 140,
+    "error_pct": -1.4,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": -0.1
+   },
+   {
+    "seed": 7,
+    "lever": "daily_payment_run",
+    "metric": "discount_rsd_per_year",
+    "estimated": 906000.0,
+    "simulated": 906000,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -2.1
+   },
+   {
+    "seed": 7,
+    "lever": "no_po_no_pay",
+    "metric": "manual_hours_per_year",
+    "estimated": -77,
+    "simulated": -107,
+    "error_pct": 28.0,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": 0.6
+   },
+   {
+    "seed": 7,
+    "lever": "duplicate_check",
+    "metric": "manual_hours_per_year",
+    "estimated": 109,
+    "simulated": 109,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.4
+   },
+   {
+    "seed": 8,
+    "lever": "approval_escalation",
+    "metric": "approval_wait_h_mean_logistika",
+    "estimated": 27.6,
+    "simulated": 27.3,
+    "error_pct": 1.1,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.4
+   },
+   {
+    "seed": 8,
+    "lever": "po_change_controls",
+    "metric": "manual_hours_per_year",
+    "estimated": 96,
+    "simulated": 94,
+    "error_pct": 2.1,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": 0.0
+   },
+   {
+    "seed": 8,
+    "lever": "sef_erp_integration",
+    "metric": "manual_hours_per_year",
+    "estimated": 1084,
+    "simulated": 1082,
+    "error_pct": 0.2,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.8
+   },
+   {
+    "seed": 8,
+    "lever": "auto_three_way_match",
+    "metric": "manual_hours_per_year",
+    "estimated": 975,
+    "simulated": 974,
+    "error_pct": 0.1,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.9
+   },
+   {
+    "seed": 8,
+    "lever": "daily_payment_run",
+    "metric": "discount_rsd_per_year",
+    "estimated": 360000.0,
+    "simulated": 360000,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -2.1
+   },
+   {
+    "seed": 8,
+    "lever": "no_po_no_pay",
+    "metric": "manual_hours_per_year",
+    "estimated": -61,
+    "simulated": -93,
+    "error_pct": 34.4,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": 0.3
+   },
+   {
+    "seed": 8,
+    "lever": "duplicate_check",
+    "metric": "manual_hours_per_year",
+    "estimated": 70,
+    "simulated": 70,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.5
+   },
+   {
+    "seed": 9,
+    "lever": "po_change_controls",
+    "metric": "manual_hours_per_year",
+    "estimated": 82,
+    "simulated": 85,
+    "error_pct": -3.5,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": -0.2
+   },
+   {
+    "seed": 9,
+    "lever": "sef_erp_integration",
+    "metric": "manual_hours_per_year",
+    "estimated": 1131,
+    "simulated": 1131,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.8
+   },
+   {
+    "seed": 9,
+    "lever": "auto_three_way_match",
+    "metric": "manual_hours_per_year",
+    "estimated": 1107,
+    "simulated": 1107,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.9
+   },
+   {
+    "seed": 9,
+    "lever": "price_catalog_sync",
+    "metric": "manual_hours_per_year",
+    "estimated": 329,
+    "simulated": 275,
+    "error_pct": 19.6,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": 0.0
+   },
+   {
+    "seed": 9,
+    "lever": "daily_payment_run",
+    "metric": "discount_rsd_per_year",
+    "estimated": 786000.0,
+    "simulated": 786000,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -2.0
+   },
+   {
+    "seed": 10,
+    "lever": "po_change_controls",
+    "metric": "manual_hours_per_year",
+    "estimated": 154,
+    "simulated": 146,
+    "error_pct": 5.5,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": -0.1
+   },
+   {
+    "seed": 10,
+    "lever": "sef_erp_integration",
+    "metric": "manual_hours_per_year",
+    "estimated": 1271,
+    "simulated": 1270,
+    "error_pct": 0.1,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -1.0
+   },
+   {
+    "seed": 10,
+    "lever": "auto_three_way_match",
+    "metric": "manual_hours_per_year",
+    "estimated": 1118,
+    "simulated": 1118,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -1.0
+   },
+   {
+    "seed": 10,
+    "lever": "daily_payment_run",
+    "metric": "discount_rsd_per_year",
+    "estimated": 1262000.0,
+    "simulated": 1265000,
+    "error_pct": -0.2,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -2.1
+   },
+   {
+    "seed": 10,
+    "lever": "duplicate_check",
+    "metric": "manual_hours_per_year",
+    "estimated": 89,
+    "simulated": 89,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.5
+   },
+   {
+    "seed": 11,
+    "lever": "po_change_controls",
+    "metric": "manual_hours_per_year",
+    "estimated": 56,
+    "simulated": 68,
+    "error_pct": -17.6,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": 0.0
+   },
+   {
+    "seed": 11,
+    "lever": "auto_three_way_match",
+    "metric": "manual_hours_per_year",
+    "estimated": 855,
+    "simulated": 856,
+    "error_pct": -0.1,
+    "confidence": "measured",
+    "cycle_days_mean_delta": 0.0
+   },
+   {
+    "seed": 11,
+    "lever": "price_catalog_sync",
+    "metric": "manual_hours_per_year",
+    "estimated": 212,
+    "simulated": 229,
+    "error_pct": -7.4,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": -0.3
+   },
+   {
+    "seed": 11,
+    "lever": "daily_payment_run",
+    "metric": "discount_rsd_per_year",
+    "estimated": 415000.0,
+    "simulated": 415000,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -2.1
+   },
+   {
+    "seed": 11,
+    "lever": "no_po_no_pay",
+    "metric": "manual_hours_per_year",
+    "estimated": -43,
+    "simulated": -180,
+    "error_pct": 76.1,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": 0.5
+   },
+   {
+    "seed": 11,
+    "lever": "duplicate_check",
+    "metric": "manual_hours_per_year",
+    "estimated": 48,
+    "simulated": 49,
+    "error_pct": -2.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.2
+   },
+   {
+    "seed": 12,
+    "lever": "approval_escalation",
+    "metric": "approval_wait_h_mean_logistika",
+    "estimated": 26.6,
+    "simulated": 27.1,
+    "error_pct": -1.8,
+    "confidence": "measured",
+    "cycle_days_mean_delta": 0.0
+   },
+   {
+    "seed": 12,
+    "lever": "po_change_controls",
+    "metric": "manual_hours_per_year",
+    "estimated": 85,
+    "simulated": 95,
+    "error_pct": -10.5,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": 0.0
+   },
+   {
+    "seed": 12,
+    "lever": "sef_erp_integration",
+    "metric": "manual_hours_per_year",
+    "estimated": 1124,
+    "simulated": 1123,
+    "error_pct": 0.1,
+    "confidence": "measured",
+    "cycle_days_mean_delta": 0.0
+   },
+   {
+    "seed": 12,
+    "lever": "auto_three_way_match",
+    "metric": "manual_hours_per_year",
+    "estimated": 935,
+    "simulated": 936,
+    "error_pct": -0.1,
+    "confidence": "measured",
+    "cycle_days_mean_delta": 0.0
+   },
+   {
+    "seed": 12,
+    "lever": "daily_payment_run",
+    "metric": "discount_rsd_per_year",
+    "estimated": 170000.0,
+    "simulated": 170000,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -2.0
+   },
+   {
+    "seed": 12,
+    "lever": "no_po_no_pay",
+    "metric": "manual_hours_per_year",
+    "estimated": -62,
+    "simulated": -140,
+    "error_pct": 55.7,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": 0.7
+   },
+   {
+    "seed": 12,
+    "lever": "duplicate_check",
+    "metric": "manual_hours_per_year",
+    "estimated": 104,
+    "simulated": 104,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.3
+   },
+   {
+    "seed": 13,
+    "lever": "approval_escalation",
+    "metric": "approval_wait_h_mean_logistika",
+    "estimated": 26.5,
+    "simulated": 25.6,
+    "error_pct": 3.5,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.2
+   },
+   {
+    "seed": 13,
+    "lever": "po_change_controls",
+    "metric": "manual_hours_per_year",
+    "estimated": 134,
+    "simulated": 133,
+    "error_pct": 0.8,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": 0.1
+   },
+   {
+    "seed": 13,
+    "lever": "price_catalog_sync",
+    "metric": "manual_hours_per_year",
+    "estimated": 252,
+    "simulated": 270,
+    "error_pct": -6.7,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": -0.3
+   },
+   {
+    "seed": 13,
+    "lever": "duplicate_check",
+    "metric": "manual_hours_per_year",
+    "estimated": 105,
+    "simulated": 105,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.1
+   },
+   {
+    "seed": 14,
+    "lever": "sef_erp_integration",
+    "metric": "manual_hours_per_year",
+    "estimated": 1017,
+    "simulated": 1015,
+    "error_pct": 0.2,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.1
+   },
+   {
+    "seed": 14,
+    "lever": "price_catalog_sync",
+    "metric": "manual_hours_per_year",
+    "estimated": 310,
+    "simulated": 329,
+    "error_pct": -5.8,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": -0.5
+   },
+   {
+    "seed": 15,
+    "lever": "auto_three_way_match",
+    "metric": "manual_hours_per_year",
+    "estimated": 1374,
+    "simulated": 1374,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": 0.1
+   },
+   {
+    "seed": 15,
+    "lever": "price_catalog_sync",
+    "metric": "manual_hours_per_year",
+    "estimated": 389,
+    "simulated": 389,
+    "error_pct": 0.0,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": -0.4
+   },
+   {
+    "seed": 15,
+    "lever": "daily_payment_run",
+    "metric": "discount_rsd_per_year",
+    "estimated": 853000.0,
+    "simulated": 853000,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -2.0
+   },
+   {
+    "seed": 16,
+    "lever": "po_change_controls",
+    "metric": "manual_hours_per_year",
+    "estimated": 111,
+    "simulated": 120,
+    "error_pct": -7.5,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": -0.3
+   },
+   {
+    "seed": 16,
+    "lever": "daily_payment_run",
+    "metric": "discount_rsd_per_year",
+    "estimated": 868000.0,
+    "simulated": 869000,
+    "error_pct": -0.1,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -2.0
+   },
+   {
+    "seed": 16,
+    "lever": "no_po_no_pay",
+    "metric": "manual_hours_per_year",
+    "estimated": -37,
+    "simulated": -293,
+    "error_pct": 87.4,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": 0.1
+   },
+   {
+    "seed": 17,
+    "lever": "po_change_controls",
+    "metric": "manual_hours_per_year",
+    "estimated": 102,
+    "simulated": 98,
+    "error_pct": 4.1,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": -0.1
+   },
+   {
+    "seed": 17,
+    "lever": "price_catalog_sync",
+    "metric": "manual_hours_per_year",
+    "estimated": 241,
+    "simulated": 228,
+    "error_pct": 5.7,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": -0.2
+   },
+   {
+    "seed": 17,
+    "lever": "daily_payment_run",
+    "metric": "discount_rsd_per_year",
+    "estimated": 180000.0,
+    "simulated": 180000,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -2.1
+   },
+   {
+    "seed": 17,
+    "lever": "no_po_no_pay",
+    "metric": "manual_hours_per_year",
+    "estimated": -62,
+    "simulated": -435,
+    "error_pct": 85.7,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": 0.6
+   },
+   {
+    "seed": 17,
+    "lever": "duplicate_check",
+    "metric": "manual_hours_per_year",
+    "estimated": 84,
+    "simulated": 85,
+    "error_pct": -1.2,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.3
+   },
+   {
+    "seed": 18,
+    "lever": "po_change_controls",
+    "metric": "manual_hours_per_year",
+    "estimated": 109,
+    "simulated": 120,
+    "error_pct": -9.2,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": 0.0
+   },
+   {
+    "seed": 18,
+    "lever": "no_po_no_pay",
+    "metric": "manual_hours_per_year",
+    "estimated": -60,
+    "simulated": -75,
+    "error_pct": 20.0,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": 0.5
+   },
+   {
+    "seed": 19,
+    "lever": "sef_erp_integration",
+    "metric": "manual_hours_per_year",
+    "estimated": 750,
+    "simulated": 750,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": 0.0
+   },
+   {
+    "seed": 19,
+    "lever": "auto_three_way_match",
+    "metric": "manual_hours_per_year",
+    "estimated": 827,
+    "simulated": 827,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": 0.0
+   },
+   {
+    "seed": 19,
+    "lever": "price_catalog_sync",
+    "metric": "manual_hours_per_year",
+    "estimated": 225,
+    "simulated": 208,
+    "error_pct": 8.2,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": -0.3
+   },
+   {
+    "seed": 19,
+    "lever": "daily_payment_run",
+    "metric": "discount_rsd_per_year",
+    "estimated": 119000.0,
+    "simulated": 119000,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -2.1
+   },
+   {
+    "seed": 19,
+    "lever": "no_po_no_pay",
+    "metric": "manual_hours_per_year",
+    "estimated": -33,
+    "simulated": -391,
+    "error_pct": 91.6,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": 0.5
+   },
+   {
+    "seed": 20,
+    "lever": "auto_three_way_match",
+    "metric": "manual_hours_per_year",
+    "estimated": 1439,
+    "simulated": 1439,
+    "error_pct": 0.0,
+    "confidence": "measured",
+    "cycle_days_mean_delta": -0.1
+   },
+   {
+    "seed": 20,
+    "lever": "price_catalog_sync",
+    "metric": "manual_hours_per_year",
+    "estimated": 468,
+    "simulated": 490,
+    "error_pct": -4.5,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": -0.6
+   },
+   {
+    "seed": 20,
+    "lever": "no_po_no_pay",
+    "metric": "manual_hours_per_year",
+    "estimated": -50,
+    "simulated": -334,
+    "error_pct": 85.0,
+    "confidence": "assumed",
+    "cycle_days_mean_delta": 0.1
+   }
+  ]
+ },
+ "advisor": {
+  "provider": "gemini",
+  "model": "gemini-3.5-flash",
+  "scenarios": 3,
+  "completed": 3,
+  "coverage_pct": 100.0,
+  "extra_recommendations": 0,
+  "numbers": 183,
+  "grounded_pct": 100.0,
+  "mean_latency_s": 71.3,
+  "mean_llm_calls": 5.7,
+  "mean_tokens_in": 30449,
+  "mean_tokens_out": 7366,
+  "total_cost_usd": 0.0,
+  "results": [
+   {
+    "seed": 101,
+    "planted": [
+     "po_change_rework",
+     "manual_invoice_entry",
+     "duplicate_payments"
+    ],
+    "detected": [
+     "duplicate_payments",
+     "manual_invoice_entry",
+     "po_change_rework"
+    ],
+    "recommended": [
+     "duplicate_check",
+     "po_change_controls",
+     "sef_erp_integration"
+    ],
+    "covered": 3,
+    "wanted": 3,
+    "extra": [],
+    "grounding": {
+     "numbers": 51,
+     "grounded": 51,
+     "ungrounded": [],
+     "grounded_pct": 100.0
+    },
+    "llm_calls": 7,
+    "tool_calls": 16,
+    "input_tokens": 36535,
+    "output_tokens": 6411,
+    "cost_usd": 0.0,
+    "latency_s": 33.8,
+    "error": null,
+    "source": "llm"
+   },
+   {
+    "seed": 102,
+    "planted": [
+     "manual_invoice_entry",
+     "manual_three_way_match",
+     "maverick_buying"
+    ],
+    "detected": [
+     "manual_invoice_entry",
+     "manual_three_way_match",
+     "maverick_buying"
+    ],
+    "recommended": [
+     "auto_three_way_match",
+     "no_po_no_pay",
+     "sef_erp_integration"
+    ],
+    "covered": 3,
+    "wanted": 3,
+    "extra": [],
+    "grounding": {
+     "numbers": 49,
+     "grounded": 49,
+     "ungrounded": [],
+     "grounded_pct": 100.0
+    },
+    "llm_calls": 5,
+    "tool_calls": 17,
+    "input_tokens": 29057,
+    "output_tokens": 7917,
+    "cost_usd": 0.0,
+    "latency_s": 128.6,
+    "error": null,
+    "source": "llm"
+   },
+   {
+    "seed": 103,
+    "planted": [
+     "approval_bottleneck",
+     "po_change_rework",
+     "manual_invoice_entry",
+     "price_discrepancy_rework",
+     "batched_payment_run",
+     "duplicate_payments"
+    ],
+    "detected": [
+     "approval_bottleneck",
+     "batched_payment_run",
+     "duplicate_payments",
+     "manual_invoice_entry",
+     "po_change_rework",
+     "price_discrepancy_rework"
+    ],
+    "recommended": [
+     "approval_escalation",
+     "daily_payment_run",
+     "duplicate_check",
+     "po_change_controls",
+     "price_catalog_sync",
+     "sef_erp_integration"
+    ],
+    "covered": 6,
+    "wanted": 6,
+    "extra": [],
+    "grounding": {
+     "numbers": 83,
+     "grounded": 83,
+     "ungrounded": [],
+     "grounded_pct": 100.0
+    },
+    "llm_calls": 5,
+    "tool_calls": 16,
+    "input_tokens": 25755,
+    "output_tokens": 7770,
+    "cost_usd": 0.0,
+    "latency_s": 51.5,
+    "error": null,
+    "source": "llm"
+   }
+  ]
+ },
+ "seeds": 40,
+ "est_seeds": 20
+}

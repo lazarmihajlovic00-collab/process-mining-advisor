@@ -76,7 +76,14 @@ def advise(ws: Workspace, user: str = "analiticar", question: str | None = None)
         res = _run_gemini(ws, user, question)
     else:
         res = _run_anthropic(ws, user, question)
-    if res.source != "template":
+    if res.source != "template" and res.error and not res.recommendation_ids:
+        # the model failed before recommending anything (quota, network): fall back to the template advisor
+        err = res.error
+        res = template.advise(ws, user)
+        res.error = err
+        res.text = (f"> AI savetnik nije dostupan ({err[:80]}...). Ovo je šablonski izveštaj iz istih brojeva.\n\n"
+                    + res.text)
+    elif res.source != "template":
         res.grounding = grounding.check(res.text, res.tool_outputs)
     ws.store.add_report(ws.run().id, res.source, res.model, res.text, res.grounding, res.tool_calls)
     ws.store.audit(f"agent (za {user})" if res.source != "template" else "system", "report_written",

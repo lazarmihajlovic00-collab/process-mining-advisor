@@ -147,3 +147,18 @@ def test_anthropic_loop_with_scripted_model(ws, monkeypatch):
     assert res.error is None and res.recommendation_ids
     assert res.cost_usd > 0
     assert ws.recommendations()[0]["lever"] == "sef_erp_integration"
+
+
+def test_llm_failure_falls_back_to_template(ws, monkeypatch):
+    class Down:
+        def post(self, *a, **k):
+            return _Resp({"error": {"message": "quota"}}, 429)
+
+    monkeypatch.setenv("LLM_DISABLED", "0")
+    monkeypatch.setenv("LLM_PROVIDER", "gemini")
+    monkeypatch.setenv("GEMINI_API_KEY", "test")
+    monkeypatch.setattr(llm, "gemini_http", lambda: Down())
+    monkeypatch.setattr(runner.time, "sleep", lambda s: None)
+    res = runner.advise(ws, "ana")
+    assert res.source == "template" and res.error and "šablonski" in res.text
+    assert len(ws.recommendations()) == 2

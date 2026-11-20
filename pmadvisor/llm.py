@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import os
 
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash")  # 2.5-flash free tier: 20 requests/day
 GEMINI_URL = os.environ.get("GEMINI_URL", "https://generativelanguage.googleapis.com/v1beta")
 CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL", "claude-opus-5-5")
 

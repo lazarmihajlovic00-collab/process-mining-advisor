@@ -128,6 +128,9 @@ def advisor_eval(seeds: int) -> dict:
                         "latency_s": round(time.perf_counter() - t0, 1), "error": res.error, "source": res.source})
         time.sleep(2)
     ok = [r for r in results if not r["error"]]
+    for r in results:
+        if r["error"]:
+            r["error"] = r["error"][:120]
     W, C = sum(r["wanted"] for r in ok), sum(r["covered"] for r in ok)
     nums = sum(r["grounding"].get("numbers", 0) for r in ok)
     grounded = sum(r["grounding"].get("grounded", 0) for r in ok)
@@ -214,13 +217,21 @@ def report_md(det: dict, est: dict, adv: dict | None, seeds: int, est_seeds: int
     return "\n".join(L) + "\n"
 
 
-def main(seeds: int = 40, use_llm: bool = False, llm_seeds: int = 6, out: str = "docs", est_seeds: int | None = None):
+def main(seeds: int = 40, use_llm: bool = False, llm_seeds: int = 6, out: str = "docs", est_seeds: int | None = None,
+         llm_only: bool = False):
     est_seeds = est_seeds or max(5, seeds // 2)
     t0 = time.time()
-    print(f"detection on {seeds} scenarios x 4 log types ...")
-    det = detection(seeds)
-    print(f"estimates vs simulation on {est_seeds} scenarios ...")
-    est = estimates(est_seeds)
+    prev = Path(out, "eval_report.json")
+    if llm_only and prev.exists():  # reuse detection/estimates, re-run only the AI advisor part
+        old = json.loads(prev.read_text(encoding="utf-8"))
+        det, est = old["detection"], old["estimates"]
+        seeds, est_seeds = old.get("seeds", seeds), old.get("est_seeds", est_seeds)
+        use_llm = True
+    else:
+        print(f"detection on {seeds} scenarios x 4 log types ...")
+        det = detection(seeds)
+        print(f"estimates vs simulation on {est_seeds} scenarios ...")
+        est = estimates(est_seeds)
     adv = None
     if use_llm:
         if llm.provider() is None:
@@ -231,7 +242,8 @@ def main(seeds: int = 40, use_llm: bool = False, llm_seeds: int = 6, out: str = 
     Path(out).mkdir(parents=True, exist_ok=True)
     md = report_md(det, est, adv, seeds, est_seeds)
     Path(out, "eval_report.md").write_text(md, encoding="utf-8")
-    Path(out, "eval_report.json").write_text(json.dumps({"detection": det, "estimates": est, "advisor": adv},
+    Path(out, "eval_report.json").write_text(json.dumps({"detection": det, "estimates": est, "advisor": adv,
+                                                         "seeds": seeds, "est_seeds": est_seeds},
                                                         ensure_ascii=False, indent=1, default=str), encoding="utf-8")
     print(md)
     print(f"done in {time.time() - t0:.0f} s -> {out}/eval_report.md")

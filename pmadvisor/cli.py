@@ -103,7 +103,7 @@ def cmd_bpmn(args):
 def cmd_eval(args):
     from .eval import runner
 
-    runner.main(seeds=args.seeds, use_llm=args.llm, llm_seeds=args.llm_seeds, out=args.out)
+    runner.main(seeds=args.seeds, use_llm=args.llm, llm_seeds=args.llm_seeds, out=args.out, llm_only=args.llm_only)
 
 
 def cmd_serve(args):
@@ -148,6 +148,7 @@ def main(argv=None):
     e.add_argument("--seeds", type=int, default=40)
     e.add_argument("--llm", action="store_true", help="also evaluate the AI advisor (needs GEMINI_API_KEY or ANTHROPIC_API_KEY)")
     e.add_argument("--llm-seeds", type=int, default=6)
+    e.add_argument("--llm-only", action="store_true", help="re-run only the AI advisor part, reuse the rest of the last report")
     e.add_argument("--out", default="docs")
     e.set_defaults(fn=cmd_eval)
     sv = sub.add_parser("serve", help="dashboard + API")

@@ -1,9 +1,9 @@
 /* Process Mining Advisor dashboard: plain JS, no build step. */
 const $ = (s) => document.querySelector(s);
 const api = async (path, opts = {}) => {
-  const r = await fetch(path, { headers: { "Content-Type": "application/json", ...(opts.headers || {}) }, ...opts });
+  const r = await fetch(path, { ...opts, headers: { "Content-Type": "application/json", ...(opts.headers || {}) } });
   const body = await r.json().catch(() => ({}));
-  if (!r.ok) throw new Error(body.detail || r.statusText);
+  if (!r.ok) throw new Error(typeof body.detail === "string" ? body.detail : JSON.stringify(body.detail || r.statusText));
   return body;
 };
 const fmt = (x, d = 0) => (x === null || x === undefined ? "–" : Number(x).toLocaleString("sr-RS", { maximumFractionDigits: d, minimumFractionDigits: d }));
@@ -196,6 +196,7 @@ async function renderAdvisor() {
     $("#report").classList.remove("muted");
     $("#report").innerHTML = html;
     $("#grounding").innerHTML = rep.source === "template" ? `<div class="ground ok">Šablonski izveštaj (bez AI): svi brojevi dolaze direktno iz analize.</div>`
+      : g.numbers === undefined ? `<div class="ground warn">Provera brojeva nije urađena (savetnik nije završio).</div>`
       : g.ungrounded && g.ungrounded.length
         ? `<div class="ground warn">${g.grounded} od ${g.numbers} brojeva nađeno u rezultatima alata. Proveri označene: ${g.ungrounded.map(esc).join(", ")}</div>`
         : `<div class="ground ok">${g.grounded} od ${g.numbers} brojeva nađeno u rezultatima alata (${esc(rep.model)}).</div>`;
